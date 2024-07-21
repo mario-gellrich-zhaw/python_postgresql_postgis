@@ -30,7 +30,7 @@ Project/
 VS Code -> left Menu -> search file 'docker-compose.yml' -> right click -> Compose Up
 ```
 
-## Data base credentials (see docker-compose.yml)
+## Database credentials
 
 ```bash
 Host: db
