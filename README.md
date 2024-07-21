@@ -25,13 +25,11 @@ Project/
 ```
 
 ## Run Docker containers
-
 ```bash
 VS Code -> left Menu -> search file 'docker-compose.yml' -> right click -> Compose Up
 ```
 
 ## Database credentials
-
 ```bash
 Host: db
 Port: 5432
