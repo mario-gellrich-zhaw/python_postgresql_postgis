@@ -67,26 +67,6 @@ docker exec -it postgis_container psql -U pgadmin -d osm_switzerland -c "\dt;"
 q
 ```
 
-## Register Server
-The pgAdmin tool can be used to manage the databases. Therefore, a server must be registered.
-
-In VS Code, open a new Terminal. In the upper part of the Terminal, click on 'PORTS'.
-
-Search for the port 5050 and click on 'Open in Browser' on the right side of the link.
-
-Log into the pgAdmin tool (Email: pgadmin@gmail.com, Password: geheim)
-
-Inside pgAdmin, before you can see the databases and tables, you must register a server.
-
-How to register (use the credentials shown above): https://youtu.be/MYhPNS2Ivtw?si=o0niuELbzuSCMJ3c&t=20
-
-After registration, tables can be found under: 
-
-```bash
-Servers -> db -> Databases -> osm_switzerland -> Schemas -> public -> Tables
-```
-**Tip: If registration fails, reload the web page and log in again!**
-
 ## Make SQL Queries
 In order to make SQL queries, right click on the 'osm_switzerland' database name -> Query Tool.
 
