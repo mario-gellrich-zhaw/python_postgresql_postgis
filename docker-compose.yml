@@ -29,6 +29,7 @@ services:
     volumes:
       - pgadmin_data:/var/lib/pgadmin
       - ./.devcontainer/servers.json:/pgadmin4/servers.json
+      - ./.devcontainer/config_local.py:/pgadmin4/config_local.py:ro
     ports:
       - "5050:80"
     restart: unless-stopped

@@ -21,5 +21,6 @@
             "workbench.iconTheme": "vs-seti"
         }
         }
-    }
+    },
+    "postStartCommand": "bash .devcontainer/start.sh"
 }
