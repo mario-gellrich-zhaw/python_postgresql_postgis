@@ -29,7 +29,7 @@ Project/
 └── ...
 ```
 
-## Run Docker containers
+## Run Docker containers (PostgreSQL and pgadmin)
 ```bash
 # Check, whether the two Docker containers (PostgreSQL and pgadmin) are running
 docker ps
@@ -39,7 +39,7 @@ docker ps
 # If the containers are not running, start them using: 
 VS Code -> left Menu -> search file 'docker-compose.yml' -> right click -> Compose Up
 
-# In addition, open a terminal and run:
+# If the containers are running (check via 'docker ps'), open a terminal and additionally run:
 bash .devcontainer/start.sh
 ```
 
