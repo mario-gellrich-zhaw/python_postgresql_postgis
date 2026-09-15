@@ -33,7 +33,7 @@ Project/
 ```bash
 VS Code -> left Menu -> search file 'docker-compose.yml' -> right click -> Compose Up
 
-# After `docker compose down && docker compose up -d`, run once:
+# After `Compose Restart`, run once:
 bash .devcontainer/start.sh
 ```
 
