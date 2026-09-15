@@ -31,9 +31,15 @@ Project/
 
 ## Run Docker containers
 ```bash
+# Check, whether the two Docker containers (PostgreSQL and pgadmin) are running
+docker ps
+
+# If the containers are running, you can go to the section 'Import OSM data' below
+
+# If the containers are not running, start them using: 
 VS Code -> left Menu -> search file 'docker-compose.yml' -> right click -> Compose Up
 
-# If you have to restart the containers using `Compose Restart`, run once:
+# In addition, open a terminal and run:
 bash .devcontainer/start.sh
 ```
 
