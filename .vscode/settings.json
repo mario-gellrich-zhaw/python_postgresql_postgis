@@ -3,5 +3,6 @@
     "python-envs.pythonProjects": [],
     "pylint.enabled": false,
     "python.analysis.enabled": false,
-    "pylance.insidersChannel": "off"
+    "pylance.insidersChannel": "off",
+    "remote.autoForwardPortsFallback": 0
 }
