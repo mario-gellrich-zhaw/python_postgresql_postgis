@@ -3,14 +3,6 @@
 <head>
     
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    
-        <script>
-            L_NO_TOUCH = false;
-            L_DISABLE_3D = false;
-        </script>
-    
-    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
-    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -25,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_746ab13492574de96a9af6cd68778bc0 {
+                #map_ecd72416aad202ca484fd7e719c6d765 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -34,6 +26,29 @@
                 }
                 .leaflet-container { font-size: 1rem; }
             </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
         
     
                     <style>
@@ -55,20 +70,23 @@
 <body>
     
     
-            <div class="folium-map" id="map_746ab13492574de96a9af6cd68778bc0" ></div>
+            <div class="folium-map" id="map_ecd72416aad202ca484fd7e719c6d765" ></div>
         
 </body>
 <script>
     
     
-            var map_746ab13492574de96a9af6cd68778bc0 = L.map(
-                "map_746ab13492574de96a9af6cd68778bc0",
+            var map_ecd72416aad202ca484fd7e719c6d765 = L.map(
+                "map_ecd72416aad202ca484fd7e719c6d765",
                 {
-                    center: [47.40736837819924, 8.589872403125],
+                    center: [47.40649378578872, 8.58977382],
                     crs: L.CRS.EPSG3857,
-                    zoom: 11,
-                    zoomControl: true,
-                    preferCanvas: false,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
                 }
             );
 
@@ -76,39 +94,61 @@
 
         
     
-            var tile_layer_f5a2434c7025f9b6e2608bbe0caa0297 = L.tileLayer(
+            var tile_layer_97c67b49a95aa0a5a38fda3fd8b3595b = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}",
-                {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Tiles \u0026copy; Esri \u0026mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
             );
         
     
-            tile_layer_f5a2434c7025f9b6e2608bbe0caa0297.addTo(map_746ab13492574de96a9af6cd68778bc0);
+            tile_layer_97c67b49a95aa0a5a38fda3fd8b3595b.addTo(map_ecd72416aad202ca484fd7e719c6d765);
         
     
 
-        function geo_json_ddc315d881c4e53471996a874b38968e_onEachFeature(feature, layer) {
+        function geo_json_a577b864dca3ca7efac2a4772989a16a_onEachFeature(feature, layer) {
+
             layer.on({
             });
         };
-        var geo_json_ddc315d881c4e53471996a874b38968e = L.geoJson(null, {
-                onEachFeature: geo_json_ddc315d881c4e53471996a874b38968e_onEachFeature,
+        var geo_json_a577b864dca3ca7efac2a4772989a16a = L.geoJson(null, {
+                onEachFeature: geo_json_a577b864dca3ca7efac2a4772989a16a_onEachFeature,
             
+            ...{
+}
         });
 
-        function geo_json_ddc315d881c4e53471996a874b38968e_add (data) {
-            geo_json_ddc315d881c4e53471996a874b38968e
+        function geo_json_a577b864dca3ca7efac2a4772989a16a_add (data) {
+            geo_json_a577b864dca3ca7efac2a4772989a16a
                 .addData(data);
         }
-            geo_json_ddc315d881c4e53471996a874b38968e_add({"bbox": [8.386483599999998, 47.31128110009538, 8.7996489, 47.512114200050924], "features": [{"bbox": [8.749490499999999, 47.49886320005391, 8.749490499999999, 47.49886320005391], "geometry": {"coordinates": [8.749490499999999, 47.49886320005391], "type": "Point"}, "id": "0", "properties": {"name": "K\u00fcng \u0026 Co", "osm_id": 5921443396, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.5957397, 47.408249200074096, 8.5957397, 47.408249200074096], "geometry": {"coordinates": [8.5957397, 47.408249200074096], "type": "Point"}, "id": "1", "properties": {"name": "Nespresso Boutique", "osm_id": 4841545900, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.539443299999999, 47.420360900071415, 8.539443299999999, 47.420360900071415], "geometry": {"coordinates": [8.539443299999999, 47.420360900071415], "type": "Point"}, "id": "2", "properties": {"name": "Kaffeer\u00f6sterei Vitali", "osm_id": 2340186699, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.5365434, 47.36939410008266, 8.5365434, 47.36939410008266], "geometry": {"coordinates": [8.5365434, 47.36939410008266], "type": "Point"}, "id": "3", "properties": {"name": "Beanbank", "osm_id": 10967856734, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.525063000000001, 47.31128110009538, 8.525063000000001, 47.31128110009538], "geometry": {"coordinates": [8.525063000000001, 47.31128110009538], "type": "Point"}, "id": "4", "properties": {"name": "Tchibo", "osm_id": 5628118179, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.5349981, 47.36757260008308, 8.5349981, 47.36757260008308], "geometry": {"coordinates": [8.5349981, 47.36757260008308], "type": "Point"}, "id": "5", "properties": {"name": "Tchibo", "osm_id": 4891858465, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.487326700000002, 47.38833260007849, 8.487326700000002, 47.38833260007849], "geometry": {"coordinates": [8.487326700000002, 47.38833260007849], "type": "Point"}, "id": "6", "properties": {"name": "Tchibo", "osm_id": 4838594338, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.5161163, 47.512114200050924, 8.5161163, 47.512114200050924], "geometry": {"coordinates": [8.5161163, 47.512114200050924], "type": "Point"}, "id": "7", "properties": {"name": "Henauer Kaffee", "osm_id": 11097262757, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.386483599999998, 47.45953800006271, 8.386483599999998, 47.45953800006271], "geometry": {"coordinates": [8.386483599999998, 47.45953800006271], "type": "Point"}, "id": "8", "properties": {"name": "Messina Coffee Store", "osm_id": 6424049576, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.7539295, 47.504490400052646, 8.7539295, 47.504490400052646], "geometry": {"coordinates": [8.7539295, 47.504490400052646], "type": "Point"}, "id": "9", "properties": {"name": "Vitudurum.com GmbH", "osm_id": 11017970651, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.7277049, 47.49912380005384, 8.7277049, 47.49912380005384], "geometry": {"coordinates": [8.7277049, 47.49912380005384], "type": "Point"}, "id": "10", "properties": {"name": "Kaffeeleben", "osm_id": 738947656, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.7224486, 47.5007133000535, 8.7224486, 47.5007133000535], "geometry": {"coordinates": [8.7224486, 47.5007133000535], "type": "Point"}, "id": "11", "properties": {"name": "Royal Pacific Coffee Company", "osm_id": 4153947943, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.7216476, 47.50352040005287, 8.7216476, 47.50352040005287], "geometry": {"coordinates": [8.7216476, 47.50352040005287], "type": "Point"}, "id": "12", "properties": {"name": "R\u00f6sterei Caff\u00e8 l\u2019amica", "osm_id": 4447099306, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.598944799999998, 47.40057460007579, 8.598944799999998, 47.40057460007579], "geometry": {"coordinates": [8.598944799999998, 47.40057460007579], "type": "Point"}, "id": "13", "properties": {"name": "Atinkana", "osm_id": 12023129318, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.538495, 47.37765420008086, 8.538495, 47.37765420008086], "geometry": {"coordinates": [8.538495, 47.37765420008086], "type": "Point"}, "id": "14", "properties": {"name": "Tchibo", "osm_id": 4424939168, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.7393332, 47.34586360008783, 8.7393332, 47.34586360008783], "geometry": {"coordinates": [8.7393332, 47.34586360008783], "type": "Point"}, "id": "15", "properties": {"name": "Gustus GmbH", "osm_id": 2859841762, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.5355052, 47.36759520008305, 8.5355052, 47.36759520008305], "geometry": {"coordinates": [8.5355052, 47.36759520008305], "type": "Point"}, "id": "16", "properties": {"name": "ViCAFE", "osm_id": 730380415, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.531518100000001, 47.37351840008176, 8.531518100000001, 47.37351840008176], "geometry": {"coordinates": [8.531518100000001, 47.37351840008176], "type": "Point"}, "id": "17", "properties": {"name": "Rent a Barista", "osm_id": 5297627699, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.4530213, 47.39872890007621, 8.4530213, 47.39872890007621], "geometry": {"coordinates": [8.4530213, 47.39872890007621], "type": "Point"}, "id": "18", "properties": {"name": "Barista Academy Turm Kaffee Z\u00fcrich", "osm_id": 10992872554, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.4520048, 47.39820150007632, 8.4520048, 47.39820150007632], "geometry": {"coordinates": [8.4520048, 47.39820150007632], "type": "Point"}, "id": "19", "properties": {"name": "caffeonline.ch", "osm_id": 5168254824, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.7297672, 47.49819720005405, 8.7297672, 47.49819720005405], "geometry": {"coordinates": [8.7297672, 47.49819720005405], "type": "Point"}, "id": "20", "properties": {"name": "Nespresso Boutique", "osm_id": 708997948, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.6671452, 47.382598700079754, 8.6671452, 47.382598700079754], "geometry": {"coordinates": [8.6671452, 47.382598700079754], "type": "Point"}, "id": "21", "properties": {"name": "Nespresso", "osm_id": 7473206196, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.6668701, 47.38257840007977, 8.6668701, 47.38257840007977], "geometry": {"coordinates": [8.6668701, 47.38257840007977], "type": "Point"}, "id": "22", "properties": {"name": "Tchibo", "osm_id": 7473206197, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.629470199999998, 47.396420300076734, 8.629470199999998, 47.396420300076734], "geometry": {"coordinates": [8.629470199999998, 47.396420300076734], "type": "Point"}, "id": "23", "properties": {"name": "Caf\u00e9 etc", "osm_id": 7920930785, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.546506299999999, 47.409508100073815, 8.546506299999999, 47.409508100073815], "geometry": {"coordinates": [8.546506299999999, 47.409508100073815], "type": "Point"}, "id": "24", "properties": {"name": "Tchibo", "osm_id": 311859455, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.5381195, 47.37477910008148, 8.5381195, 47.37477910008148], "geometry": {"coordinates": [8.5381195, 47.37477910008148], "type": "Point"}, "id": "25", "properties": {"name": "Nespresso", "osm_id": 11350560294, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.554723999999998, 47.36507950008362, 8.554723999999998, 47.36507950008362], "geometry": {"coordinates": [8.554723999999998, 47.36507950008362], "type": "Point"}, "id": "26", "properties": {"name": "Tchibo", "osm_id": 3830372125, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.7996489, 47.327160400091906, 8.7996489, 47.327160400091906], "geometry": {"coordinates": [8.7996489, 47.327160400091906], "type": "Point"}, "id": "27", "properties": {"name": "Tchibo", "osm_id": 2895253247, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.5192177, 47.37177790008214, 8.5192177, 47.37177790008214], "geometry": {"coordinates": [8.5192177, 47.37177790008214], "type": "Point"}, "id": "28", "properties": {"name": "Kaffeepur", "osm_id": 4370365690, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.528148699999997, 47.373424400081774, 8.528148699999997, 47.373424400081774], "geometry": {"coordinates": [8.528148699999997, 47.373424400081774], "type": "Point"}, "id": "29", "properties": {"name": "Tschibo", "osm_id": 13108614270, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.5330373, 47.3778733000808, 8.5330373, 47.3778733000808], "geometry": {"coordinates": [8.5330373, 47.3778733000808], "type": "Point"}, "id": "30", "properties": {"name": "Bean Bank Coffee \u0026 CO", "osm_id": 10795431343, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.5175042, 47.37070060008237, 8.5175042, 47.37070060008237], "geometry": {"coordinates": [8.5175042, 47.37070060008237], "type": "Point"}, "id": "31", "properties": {"name": "Kaffeewerkstadt", "osm_id": 4515947589, "shop": "coffee"}, "type": "Feature"}], "type": "FeatureCollection"});
-        geo_json_ddc315d881c4e53471996a874b38968e.setStyle(function(feature) {return feature.properties.style;});
+            geo_json_a577b864dca3ca7efac2a4772989a16a_add({"bbox": [8.386483599999998, 47.31128110009538, 8.7820567, 47.512114200050924], "features": [{"bbox": [8.7539295, 47.50449040005264, 8.7539295, 47.50449040005264], "geometry": {"coordinates": [8.7539295, 47.50449040005264], "type": "Point"}, "id": "0", "properties": {"name": "Vitudurum.com GmbH", "osm_id": 11017970651, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.7297672, 47.49819720005405, 8.7297672, 47.49819720005405], "geometry": {"coordinates": [8.7297672, 47.49819720005405], "type": "Point"}, "id": "1", "properties": {"name": "Nespresso Boutique", "osm_id": 708997948, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.7277049, 47.49912380005384, 8.7277049, 47.49912380005384], "geometry": {"coordinates": [8.7277049, 47.49912380005384], "type": "Point"}, "id": "2", "properties": {"name": "Kaffeeleben", "osm_id": 738947656, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.6671452, 47.382598700079754, 8.6671452, 47.382598700079754], "geometry": {"coordinates": [8.6671452, 47.382598700079754], "type": "Point"}, "id": "3", "properties": {"name": "Nespresso", "osm_id": 7473206196, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.6668701, 47.38257840007977, 8.6668701, 47.38257840007977], "geometry": {"coordinates": [8.6668701, 47.38257840007977], "type": "Point"}, "id": "4", "properties": {"name": "Tchibo", "osm_id": 7473206197, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.629470199999998, 47.396420300076734, 8.629470199999998, 47.396420300076734], "geometry": {"coordinates": [8.629470199999998, 47.396420300076734], "type": "Point"}, "id": "5", "properties": {"name": "Caf\u00e9 etc", "osm_id": 7920930785, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.554723999999998, 47.36507950008362, 8.554723999999998, 47.36507950008362], "geometry": {"coordinates": [8.554723999999998, 47.36507950008362], "type": "Point"}, "id": "6", "properties": {"name": "Tchibo", "osm_id": 3830372125, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.525063000000001, 47.31128110009538, 8.525063000000001, 47.31128110009538], "geometry": {"coordinates": [8.525063000000001, 47.31128110009538], "type": "Point"}, "id": "7", "properties": {"name": "Tchibo", "osm_id": 5628118179, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.5192177, 47.371777900082144, 8.5192177, 47.371777900082144], "geometry": {"coordinates": [8.5192177, 47.371777900082144], "type": "Point"}, "id": "8", "properties": {"name": "Kaffeepur", "osm_id": 4370365690, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.531518100000001, 47.37351840008176, 8.531518100000001, 47.37351840008176], "geometry": {"coordinates": [8.531518100000001, 47.37351840008176], "type": "Point"}, "id": "9", "properties": {"name": "Rent a Barista", "osm_id": 5297627699, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.5330373, 47.3778733000808, 8.5330373, 47.3778733000808], "geometry": {"coordinates": [8.5330373, 47.3778733000808], "type": "Point"}, "id": "10", "properties": {"name": "Bean Bank Coffee \u0026 CO", "osm_id": 10795431343, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.749490499999999, 47.49886320005391, 8.749490499999999, 47.49886320005391], "geometry": {"coordinates": [8.749490499999999, 47.49886320005391], "type": "Point"}, "id": "11", "properties": {"name": "K\u00fcng \u0026 Co", "osm_id": 5921443396, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.5957397, 47.408249200074096, 8.5957397, 47.408249200074096], "geometry": {"coordinates": [8.5957397, 47.408249200074096], "type": "Point"}, "id": "12", "properties": {"name": "Nespresso Boutique", "osm_id": 4841545900, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.51921, 47.36518170008359, 8.51921, 47.36518170008359], "geometry": {"coordinates": [8.51921, 47.36518170008359], "type": "Point"}, "id": "13", "properties": {"name": "Stoll Kaffee - Self Service Shop", "osm_id": 13282559100, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.528148699999997, 47.373424400081774, 8.528148699999997, 47.373424400081774], "geometry": {"coordinates": [8.528148699999997, 47.373424400081774], "type": "Point"}, "id": "14", "properties": {"name": "Tchibo", "osm_id": 13108614270, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.703741799999998, 47.449453300064945, 8.703741799999998, 47.449453300064945], "geometry": {"coordinates": [8.703741799999998, 47.449453300064945], "type": "Point"}, "id": "15", "properties": {"name": "Barrel Coffee AG", "osm_id": 13240797887, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.7224486, 47.500713300053505, 8.7224486, 47.500713300053505], "geometry": {"coordinates": [8.7224486, 47.500713300053505], "type": "Point"}, "id": "16", "properties": {"name": "Royal Pacific Coffee Company", "osm_id": 4153947943, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.7216476, 47.50352040005287, 8.7216476, 47.50352040005287], "geometry": {"coordinates": [8.7216476, 47.50352040005287], "type": "Point"}, "id": "17", "properties": {"name": "R\u00f6sterei Caff\u00e8 l\u2019amica", "osm_id": 4447099306, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.539443299999999, 47.420360900071415, 8.539443299999999, 47.420360900071415], "geometry": {"coordinates": [8.539443299999999, 47.420360900071415], "type": "Point"}, "id": "18", "properties": {"name": "Kaffeer\u00f6sterei Vitali", "osm_id": 2340186699, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.546506299999999, 47.409508100073815, 8.546506299999999, 47.409508100073815], "geometry": {"coordinates": [8.546506299999999, 47.409508100073815], "type": "Point"}, "id": "19", "properties": {"name": "Tchibo", "osm_id": 311859455, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.5992061, 47.40055670007579, 8.5992061, 47.40055670007579], "geometry": {"coordinates": [8.5992061, 47.40055670007579], "type": "Point"}, "id": "20", "properties": {"name": "Atinkana", "osm_id": 12023129318, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.5381195, 47.37477910008148, 8.5381195, 47.37477910008148], "geometry": {"coordinates": [8.5381195, 47.37477910008148], "type": "Point"}, "id": "21", "properties": {"name": "Nespresso", "osm_id": 11350560294, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.5365434, 47.36939410008266, 8.5365434, 47.36939410008266], "geometry": {"coordinates": [8.5365434, 47.36939410008266], "type": "Point"}, "id": "22", "properties": {"name": "Beanbank", "osm_id": 10967856734, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.6396175, 47.35159250008658, 8.6396175, 47.35159250008658], "geometry": {"coordinates": [8.6396175, 47.35159250008658], "type": "Point"}, "id": "23", "properties": {"name": "Black \u0026 Blaze", "osm_id": 14113308024, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.7393332, 47.34586360008783, 8.7393332, 47.34586360008783], "geometry": {"coordinates": [8.7393332, 47.34586360008783], "type": "Point"}, "id": "24", "properties": {"name": "Gustus GmbH", "osm_id": 2859841762, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.7820567, 47.366768400083245, 8.7820567, 47.366768400083245], "geometry": {"coordinates": [8.7820567, 47.366768400083245], "type": "Point"}, "id": "25", "properties": {"name": "Cafiosa", "osm_id": 7196784387, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.4594234, 47.36333100008401, 8.4594234, 47.36333100008401], "geometry": {"coordinates": [8.4594234, 47.36333100008401], "type": "Point"}, "id": "26", "properties": {"name": "VIVYD Fashion meets Coffee", "osm_id": 13514878801, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.5349981, 47.367572600083086, 8.5349981, 47.367572600083086], "geometry": {"coordinates": [8.5349981, 47.367572600083086], "type": "Point"}, "id": "27", "properties": {"name": "Tchibo", "osm_id": 4891858465, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.5355052, 47.367595200083045, 8.5355052, 47.367595200083045], "geometry": {"coordinates": [8.5355052, 47.367595200083045], "type": "Point"}, "id": "28", "properties": {"name": "ViCAFE", "osm_id": 730380415, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.5175042, 47.37070060008237, 8.5175042, 47.37070060008237], "geometry": {"coordinates": [8.5175042, 47.37070060008237], "type": "Point"}, "id": "29", "properties": {"name": "Kaffeewerkstadt", "osm_id": 4515947589, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.487326700000002, 47.38833260007849, 8.487326700000002, 47.38833260007849], "geometry": {"coordinates": [8.487326700000002, 47.38833260007849], "type": "Point"}, "id": "30", "properties": {"name": "Tchibo", "osm_id": 4838594338, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.4530213, 47.39872890007621, 8.4530213, 47.39872890007621], "geometry": {"coordinates": [8.4530213, 47.39872890007621], "type": "Point"}, "id": "31", "properties": {"name": "Barista Academy Turm Kaffee Z\u00fcrich", "osm_id": 10992872554, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.4520048, 47.398201500076325, 8.4520048, 47.398201500076325], "geometry": {"coordinates": [8.4520048, 47.398201500076325], "type": "Point"}, "id": "32", "properties": {"name": "caffeonline.ch", "osm_id": 5168254824, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.5161163, 47.512114200050924, 8.5161163, 47.512114200050924], "geometry": {"coordinates": [8.5161163, 47.512114200050924], "type": "Point"}, "id": "33", "properties": {"name": "Henauer Kaffee", "osm_id": 11097262757, "shop": "coffee"}, "type": "Feature"}, {"bbox": [8.386483599999998, 47.45953800006271, 8.386483599999998, 47.45953800006271], "geometry": {"coordinates": [8.386483599999998, 47.45953800006271], "type": "Point"}, "id": "34", "properties": {"name": "Messina Coffee Store", "osm_id": 6424049576, "shop": "coffee"}, "type": "Feature"}], "type": "FeatureCollection"});
+        geo_json_a577b864dca3ca7efac2a4772989a16a.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-    geo_json_ddc315d881c4e53471996a874b38968e.bindPopup(
+    geo_json_a577b864dca3ca7efac2a4772989a16a.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
     
-    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
     let fields = ["name", "shop"];
     let aliases = ["name", "shop"];
     let table = '<table>' +
@@ -125,25 +165,31 @@
     
     return div
     }
-    ,{"className": "foliumpopup"});
+    ,{
+  "className": "foliumpopup",
+});
                      
     
-            geo_json_ddc315d881c4e53471996a874b38968e.addTo(map_746ab13492574de96a9af6cd68778bc0);
+            geo_json_a577b864dca3ca7efac2a4772989a16a.addTo(map_ecd72416aad202ca484fd7e719c6d765);
         
     
-            var layer_control_797eafffed9c797b92e7cea8068e8294_layers = {
+            var layer_control_7cd88c642a4afecd7f1b4b5499b9bb89_layers = {
                 base_layers : {
-                    "esriworldtopomap" : tile_layer_f5a2434c7025f9b6e2608bbe0caa0297,
+                    "esriworldtopomap" : tile_layer_97c67b49a95aa0a5a38fda3fd8b3595b,
                 },
                 overlays :  {
-                    "map" : geo_json_ddc315d881c4e53471996a874b38968e,
+                    "map" : geo_json_a577b864dca3ca7efac2a4772989a16a,
                 },
             };
-            let layer_control_797eafffed9c797b92e7cea8068e8294 = L.control.layers(
-                layer_control_797eafffed9c797b92e7cea8068e8294_layers.base_layers,
-                layer_control_797eafffed9c797b92e7cea8068e8294_layers.overlays,
-                {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_746ab13492574de96a9af6cd68778bc0);
+            let layer_control_7cd88c642a4afecd7f1b4b5499b9bb89 = L.control.layers(
+                layer_control_7cd88c642a4afecd7f1b4b5499b9bb89_layers.base_layers,
+                layer_control_7cd88c642a4afecd7f1b4b5499b9bb89_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_ecd72416aad202ca484fd7e719c6d765);
 
         
 </script>
